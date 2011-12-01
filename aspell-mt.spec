@@ -42,17 +42,17 @@ A %{languageenglazy} dictionary for use with aspell, a spelling checker.
 %make
 
 %install
-rm -fr $RPM_BUILD_ROOT
+rm -fr %{buildroot}
 
 %makeinstall_std
 
-mkdir -p $RPM_BUILD_ROOT/%{_datadir}/aspell
-mkdir -p $RPM_BUILD_ROOT/%{_libdir}/aspell
+mkdir -p %{buildroot}/%{_datadir}/aspell
+mkdir -p %{buildroot}/%{_libdir}/aspell
 
 chmod 644 Copyright README* doc/*
 
 %clean
-rm -fr $RPM_BUILD_ROOT
+rm -fr %{buildroot}
 
 %files
 %defattr(-,root,root)
